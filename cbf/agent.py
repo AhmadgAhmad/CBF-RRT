@@ -154,7 +154,8 @@ def main():
     _,ax = plt.subplots()
 
     pos1 = (0,0)
-    a1 = Agent(pos1, dynamics=Dyn.DOUBLE_INT)
+    goal = Goal((1,1))
+    a1 = Agent(pos1,Goal((1,1)), dynamics=Dyn.UNICYCLE)
     a1.plot()
     plt.pause(1)
 
