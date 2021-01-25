@@ -70,7 +70,7 @@ class Sphere(Obstacle):
         return 2*self.M
 
     def get_state(self):
-        return super(Sphere).get_state()
+        return super().get_state()
     
     def get_x_dot(self, u=None):
         return self.dyn.get_x_dot(self.state)
@@ -139,7 +139,7 @@ class Ellipsoid(Obstacle):
         return (2*self.get_M(a1).dot((a1.state - self.state))) * self.sign
 
     def get_state(self):
-        return super(Ellipsoid).get_state()
+        return super().get_state()
     
     def get_x_dot(self, u=None):
         return self.dyn.get_x_dot(self.state)
@@ -162,7 +162,7 @@ class Ellipsoid(Obstacle):
         plot_ellipse(self.loc, self.a, self.b, self.angle, ax)
     
     def plot_levelsets(self, ax=None):
-        super(Ellipsoid).plot_levelsets(ax=ax)
+        super().plot_levelsets(ax=ax)
 
 class Wall(Obstacle):
     def __init__(self, x, y, n, d):

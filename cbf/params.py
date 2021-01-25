@@ -3,7 +3,7 @@ import os
 
 # https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Singleton.html
 class Params(object):
-    __instance = None  # type: None
+    __instance = None
     def __new__(cls,configFile=None):
         if Params.__instance is None:
             Params.__instance = object.__new__(cls)
