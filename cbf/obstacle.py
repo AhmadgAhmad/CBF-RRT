@@ -71,7 +71,7 @@ class Sphere(Obstacle):
 
     def get_state(self):
         return super().get_state()
-    
+        #Dummy comment
     def get_x_dot(self, u=None):
         return self.dyn.get_x_dot(self.state)
 
